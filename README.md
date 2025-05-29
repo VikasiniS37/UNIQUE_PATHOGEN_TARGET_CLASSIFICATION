@@ -151,7 +151,7 @@ graph TD
     <td><img src="RESULTS_IMAGES/molprobity.jpg" width="250"></td>
     <td><img src="RESULTS_IMAGES/ram.jpg" width="250"></td>
     <td><img src="RESULTS_IMAGES/final_output.jpg" width="250"></td>
-    <td><img src="RESULTS_IMAGES/final_comparison.jpg" width="250"></td>
+    <td><img src="RESULTS_IMAGES/final_comaprison.jpg" width="250"></td>
   </tr>
 </table>
 
