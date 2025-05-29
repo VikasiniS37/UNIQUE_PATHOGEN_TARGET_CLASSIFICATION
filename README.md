@@ -83,12 +83,12 @@ Run AutoDock Vina for batch virtual screening
 ```mermaid
 graph TD
     A[Input: FASTA Sequences]
-    B[Sequence Alignment - SW + Hirschberg]
+    B[Sequence Alignment - Smith Waterman + Hirschberg]
     C[Unique Region Extraction]
     D[SwissModel 3D Structure]
     E[Refinement with GalaxyRefine]
     F[Active Site Detection - PrankWeb]
-    G[Docking 100 Ligands - AutoDock Vina]
+    G[Docking 100 Ligands - AutoDock Vina in pyrx]
     H[Knapsack Optimization]
     I[Top Ligand Selected]
 
@@ -143,18 +143,20 @@ graph TD
 ## Screenshots 📸
 <table>
   <tr>
-    <td><img src="RESULTS_IMAGES/swiss.jpg" width="250"></td>
-    <td><img src="RESULTS_IMAGES/merged_structure.jpg" width="250"></td>
+    <td><img src="RESULTS_IMAGES/swiss.jpg" width="500"></td>
+    <td><img src="RESULTS_IMAGES/merged_structure.jpg" width="500"></td>
   </tr>
   <tr>
-    <td><img src="RESULTS_IMAGES/merged_structure_refined.jpg" width="250"></td>
-    <td><img src="RESULTS_IMAGES/final_output.jpg" width="250"></td>
+    <td><img src="RESULTS_IMAGES/merged_structure_refined.jpg" width="500"></td>
+    <td><img src="RESULTS_IMAGES/final_output.jpg" width="500"></td>
   </tr>
   <tr>
-    <td><img src="RESULTS_IMAGES/molprobity.jpg" width="250"></td>
-    <td><img src="RESULTS_IMAGES/ram.jpg" width="250"></td>
-    <td><img src="RESULTS_IMAGES/final_output.jpg" width="250"></td>
-    <td><img src="RESULTS_IMAGES/final_comaprison.jpg" width="250"></td>
+    <td><img src="RESULTS_IMAGES/molprobity.jpg" width="500"></td>
+    <td><img src="RESULTS_IMAGES/ram.jpg" width="500"></td>
+  </tr>
+  <tr>
+    <td><img src="RESULTS_IMAGES/final_output.jpg" width="500"></td>
+    <td><img src="RESULTS_IMAGES/final_comaprison.jpg" width="500"></td>
   </tr>
 </table>
 
