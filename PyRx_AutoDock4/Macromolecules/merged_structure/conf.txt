@@ -1,0 +1,8 @@
+receptor = merged_structure.pdbqt
+exhaustiveness  = 8
+center_x = 162.138376487
+center_y = 150.95876503
+center_z = 157.405891067
+size_x = 18.2332470255
+size_y = 24.5668944597
+size_z = 18.9701441266
