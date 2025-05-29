@@ -1,5 +1,5 @@
 
-# 🧬 Unique Pathogen Target Identification in SARS-CoV-2
+# 🧬 Unique Pathogen Target Classification
 
 This project aims to identify **unique and safe protein targets** in the human proteins by comparing viral proteins to human proteins. The ultimate goal is to discover antiviral ligands that **target virus-specific regions** without causing side effects due to similarity with human proteins.
 
@@ -52,8 +52,8 @@ pip install biopython numpy pandas matplotlib
 
 1. **Clone the repository**:
 ```bash
-git clone https://github.com/yourusername/bio_daa_unique_pathogen_target.git
-cd bio_daa_unique_pathogen_target
+git clone https://github.com/VikasiniS37/UNIQUE_PATHOGEN_TARGET_CLASSIFICATION.git
+cd UNIQUE_PATHOGEN_TARGET_CLASSIFICATION.git
 ```
 
 2. **Add your files**:
@@ -147,30 +147,12 @@ cp docking_output.csv results/
 cp final_model.pdbqt results/
 cp best_ligand_pose.pdbqt results/
 ```
-
 ---
-
 ## 🔮 Future Enhancements
 
 - Scale the analysis to the **entire human proteome (~3 million sequences)** to ensure zero off-target overlap.
 - Integrate **molecular wet-lab docking and testing** for in-vitro validation of top ligands.
 - Automate the entire pipeline as a bioinformatics toolkit or web server.
-
----
-
-## 👩‍💻 Contributors
-
-- Vikasini S  
-- Namithaa V  
-- Jayavandhini K  
-- Satwika K  
-
----
-
-## 📄 Project Files
-
-- `report/B17_bio_DAA_FINAL_REPORT.pdf` — full project report  
-- `notebook/code3.ipynb` — all sequence alignment, modeling, and docking steps
 
 ---
 
