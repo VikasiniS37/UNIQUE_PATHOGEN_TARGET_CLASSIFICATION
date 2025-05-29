@@ -145,7 +145,10 @@ graph TD
   <tr>
     <td><img src="RESULTS_IMAGES/swiss.jpg" width="250"></td>
     <td><img src="RESULTS_IMAGES/merged_structure.jpg" width="250"></td>
+  </tr>
+  <tr>
     <td><img src="RESULTS_IMAGES/merged_structure_refined.jpg" width="250"></td>
+    <td><img src="RESULTS_IMAGES/final_output.jpg" width="250"></td>
   </tr>
   <tr>
     <td><img src="RESULTS_IMAGES/molprobity.jpg" width="250"></td>
