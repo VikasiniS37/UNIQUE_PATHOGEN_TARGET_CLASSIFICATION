@@ -189,4 +189,4 @@ cp best_ligand_pose.pdbqt results/
 
 ## 📬 Contact
 
-For queries, reach out via GitHub Issues or contact any of the contributors.
+For queries, reach out via GitHub Issues.
