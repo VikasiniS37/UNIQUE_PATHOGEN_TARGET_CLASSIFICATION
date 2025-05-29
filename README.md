@@ -1,17 +1,18 @@
 
 # 🧬 Unique Pathogen Target Identification in SARS-CoV-2
 
-This project aims to identify **unique and safe protein targets** in the SARS-CoV-2 virus by comparing viral proteins to human proteins. The ultimate goal is to discover antiviral ligands that **target virus-specific regions** without causing side effects due to similarity with human proteins.
+This project aims to identify **unique and safe protein targets** in the human proteins by comparing viral proteins to human proteins. The ultimate goal is to discover antiviral ligands that **target virus-specific regions** without causing side effects due to similarity with human proteins.
 
 ---
 
 ## 🎯 Objective
 
-To develop a **computational pipeline** for identifying virus-specific targets in the Spike protein of SARS-CoV-2 using:
-- Sequence alignment (Smith-Waterman & Hirschberg)
-- Structural modeling
-- Ligand docking
-- Optimization using Knapsack algorithm
+To build a **bioinformatics and molecular docking pipeline** that:
+- Aligns SARS-CoV-2 and human protein sequences
+- Identifies unique viral regions in human proteins to avoid side-effects
+- Predicts and refines 3D structures of these regions
+- Screens antiviral ligands using AutoDock Vina
+- Optimizes selection using the Knapsack algorithm
 
 ---
 
@@ -56,34 +57,50 @@ cd bio_daa_unique_pathogen_target
 ```
 
 2. **Add your files**:
-   - Place `.fasta` files into the `data/` directory.
-   - Add all ligand `.pdbqt` files into `data/ligands/`.
-   - Add `final_model.pdbqt` to `results/`.
+```bash
+Place `.fasta` files into the `data/` directory.
+Add all ligand `.pdbqt` files into `data/ligands/`.
+Add `final_model.pdbqt` to `results/`.
+```
 
-3. **Run the notebook**:
-   - Open `notebook/code3.ipynb` and follow each step to reproduce preprocessing, alignment, filtering, and structure selection.
+4. **Run the notebook**:
+```bash
+Open `notebook/code3.ipynb` and follow each step to reproduce preprocessing, alignment, filtering, and structure selection.
+```
 
-4. **Docking Setup**:
-   - Use `PyRx` or `Raccoon2` with:
-     - Receptor: `final_model.pdbqt`
-     - Ligands: in `data/ligands/`
-     - Grid Box: centered at predicted site (from PrankWeb)
-     - Run AutoDock Vina for batch virtual screening
-
+5. **Docking Setup**:
+```bash
+Use `PyRx` or `Raccoon2` with:
+Receptor: `final_model.pdbqt`
+Ligands: in `data/ligands/`
+Grid Box: centered at predicted site (from PrankWeb)
+Run AutoDock Vina for batch virtual screening
+```
 ---
 
 ## 🔁 Project Workflow
 
 ```mermaid
 graph TD
-A[Input: FASTA Sequences] --> B[Sequence Alignment (SW + Hirschberg)]
-B --> C[Unique Region Extraction]
-C --> D[SwissModel 3D Structure]
-D --> E[Refinement with GalaxyRefine]
-E --> F[Active Site Detection - PrankWeb]
-F --> G[Docking 100 Ligands (AutoDock Vina)]
-G --> H[Knapsack Optimization]
-H --> I[Top Ligand Selected]
+    A[Input: FASTA Sequences]
+    B[Sequence Alignment - SW + Hirschberg]
+    C[Unique Region Extraction]
+    D[SwissModel 3D Structure]
+    E[Refinement with GalaxyRefine]
+    F[Active Site Detection - PrankWeb]
+    G[Docking 100 Ligands - AutoDock Vina]
+    H[Knapsack Optimization]
+    I[Top Ligand Selected]
+
+    A --> B
+    B --> C
+    C --> D
+    D --> E
+    E --> F
+    F --> G
+    G --> H
+    H --> I
+
 ```
 
 ---
@@ -109,10 +126,10 @@ H --> I[Top Ligand Selected]
 
 ## 🧩 Docking Results
 
-- ✅ Best Ligand: `ZINC000151425092`
-- ✅ Binding Affinity: `-7.5 kcal/mol`
-- ✅ RMSD: `0.0 Å` (Perfect Pose)
-- ✅ Final Protein Structure: `0% clash score` (Refined using GalaxyRefine)
+✅ Best Ligand: `ZINC000151425092`  
+✅ Binding Affinity: `-7.5 kcal/mol`  
+✅ RMSD: `0.0 Å` (Perfect Pose)  
+✅ Final Protein Structure: `0% clash score` (Refined using GalaxyRefine)
 
 ---
 
