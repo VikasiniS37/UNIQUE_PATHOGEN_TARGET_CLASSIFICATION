@@ -58,21 +58,21 @@ cd UNIQUE_PATHOGEN_TARGET_CLASSIFICATION.git
 
 2. **Add your files**:
 ```bash
-Place `.fasta` files into the `data/` directory.
-Add all ligand `.pdbqt` files into `data/ligands/`.
-Add `final_model.pdbqt` to `results/`.
+Place `.fasta` files into the `DATASET/` directory.
+Add all ligand `.pdbqt` files into `LIGAND/`.
+Add `merged_structure.pdb` to `BEST_SWISS_MODEL/`.
 ```
 
 4. **Run the notebook**:
 ```bash
-Open `notebook/code3.ipynb` and follow each step to reproduce preprocessing, alignment, filtering, and structure selection.
+Open `code.ipynb` and follow each step to reproduce preprocessing, alignment, filtering, and structure selection.
 ```
 
 5. **Docking Setup**:
 ```bash
 Use `PyRx` or `Raccoon2` with:
-Receptor: `final_model.pdbqt`
-Ligands: in `data/ligands/`
+Receptor: `BEST_SWISS_MODEL\merged_structure_final.pdb`
+Ligands: in `LIGAND/`
 Grid Box: centered at predicted site (from PrankWeb)
 Run AutoDock Vina for batch virtual screening
 ```
